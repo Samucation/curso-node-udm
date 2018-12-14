@@ -5,35 +5,19 @@
  * 
  * Instalando o Express: npm install express --save
  * Instalando o EJS: npm install ejs --save
+ * 
+ * ## AULA DE NÚMERO 20 ##
  */
-console.log("Iniciando a aplicação node JS");
 
-/** Iniciando a comunicação servidor com browser */
-var express = require('express'); //invocando o express e guardando em um atributo, pode ser chamado assim: "var express = require('express')()"
-var msgModuloExterno = require('./mod_de_testes')(); //O () no final indica a execução da função, chamado dela!
+var app = require('./config/server');
 
-var app = express();// poderia ser direto usando "var express = require('express')()"
-
-//Especificando que o ejs é o novo motor de views da aplicação.
-app.set('view engine', 'ejs');
-
-
-app.get('/', function(req, res){
-    res.render("home/index");
-});
-
-app.get('/formulario_inclusao_noticia', function(req, res){
-    res.render("admin/form_add_noticia");
-});
-
-app.get('/noticias', function(req, res){
-    res.render("noticias/noticias");
-});
+var rotaNoticias = require('./app/routes/noticias')(app);
+var rotaHome = require('./app/routes/home')(app);
+var rotaFormInclusaoNoticia = require('./app/routes/forumulario_inclusao_noticia')(app);
 
 /** Chamando o servidor para que o browser possa acessar a request */
 app.listen(3000, function() {
     console.log("Servidor inicializado com express");
-    console.log(msgModuloExterno);
 });
 
 
