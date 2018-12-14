@@ -10,6 +10,8 @@ console.log("Iniciando a aplicação node JS");
 
 /** Iniciando a comunicação servidor com browser */
 var express = require('express'); //invocando o express e guardando em um atributo, pode ser chamado assim: "var express = require('express')()"
+var msgModuloExterno = require('./mod_de_testes')(); //O () no final indica a execução da função, chamado dela!
+
 var app = express();// poderia ser direto usando "var express = require('express')()"
 
 //Especificando que o ejs é o novo motor de views da aplicação.
@@ -31,6 +33,7 @@ app.get('/noticias', function(req, res){
 /** Chamando o servidor para que o browser possa acessar a request */
 app.listen(3000, function() {
     console.log("Servidor inicializado com express");
+    console.log(msgModuloExterno);
 });
 
 
