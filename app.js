@@ -17,7 +17,7 @@ app.set('view engine', 'ejs');
 
 
 app.get('/tecnologia', function(req, res){
-    res.send("<html><body><h1>Portal de tecnologia</h1></body></html>");
+    res.render("secao/tecnologia");
 });
 
 /** Inserindo os endereçamentos para o browser com express */
