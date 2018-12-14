@@ -20,7 +20,7 @@ var server = http.createServer(function(req, res) {
     if (categoria == '/beleza') {
         res.end("<html><body><h1>Portal de beleza</h1></body></html>");
     }
-    res.end("<html><body><h1>Portal de notificas</h1></body></html>");    
-});
+    res.end("<html><body><h1>Portal de noticias</h1></body></html>");    
+}).listen(3000);
 
-server.listen(3000);
+

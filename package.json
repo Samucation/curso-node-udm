@@ -1,0 +1,23 @@
+{
+  "name": "portal_noticias",
+  "version": "1.0.0",
+  "description": "Site de noticias",
+  "main": "noticias.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Samucation/curso-node-udm.git"
+  },
+  "author": "Samuel Ferreira Duarte",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Samucation/curso-node-udm/issues"
+  },
+  "homepage": "https://github.com/Samucation/curso-node-udm#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4"
+  }
+}
